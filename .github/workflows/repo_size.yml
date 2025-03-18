@@ -1,0 +1,17 @@
+name: repo_size
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.2.2
+
+      - name: Repo size
+        run: |
+          echo "Branch name: ${GITHUB_REF##*/}"
+          du -sh --exclude=.git .
