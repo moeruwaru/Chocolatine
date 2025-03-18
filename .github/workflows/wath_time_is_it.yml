@@ -1,0 +1,11 @@
+name: wath_time_is_it
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: What time is it?
+        run: echo "It's $(date)"
