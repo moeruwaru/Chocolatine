@@ -15,8 +15,6 @@ jobs:
             ${{ secrets.TARGET_REPO_URL }}
           ssh_private_key:
             ${{ secrets.SSH_KEY }} 
-          args: --force
-
   to_codecommit:
     runs-on: ubuntu-latest
     steps:
@@ -31,4 +29,3 @@ jobs:
             ${{ secrets.SSH_KEY }}
           ssh_username:
             git
-          args: --force
